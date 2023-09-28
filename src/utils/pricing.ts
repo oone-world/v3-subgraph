@@ -4,8 +4,8 @@ import { Bundle, Pool, Token } from './../types/schema'
 import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 import { exponentToBigDecimal, safeDiv } from '../utils/index'
 
-const WETH_ADDRESS = '0x5bD49815DEEEEe2EaE34467fF6AbFcF201570628'
-const USDC_WETH_03_POOL = '0xC23c1BCEFbE91E268a16F0516f51946852709e60'
+const WETH_ADDRESS = '0x5bd49815deeeee2eae34467ff6abfcf201570628'
+const USDC_WETH_03_POOL = '0xc23c1bcefbe91e268a16f0516f51946852709e60'
 
 // token where amounts should contribute to tracked volume and liquidity
 // usually tokens that many tokens are paired with s
@@ -35,7 +35,7 @@ export function getEthPriceInUSD(): BigDecimal {
   // fetch eth prices for each stablecoin
   let usdcPool = Pool.load(USDC_WETH_03_POOL) // dai is token0
   if (usdcPool !== null) {
-    return usdcPool.token0Price
+    return usdcPool.token1Price
   } else {
     return ZERO_BD
   }
