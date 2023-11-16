@@ -10,9 +10,9 @@ dataSources:
     name: Factory
     network: oone-chain
     source:
-      address: '0x35f69bef0D0c18A783Ce862853Db6c39CC549f98'
+      address: '0xe64fE5baD0BAce23526A6EbC35df9934753645DF'
       abi: Factory
-      startBlock: 308964
+      startBlock: 466449
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -39,9 +39,9 @@ dataSources:
     name: NonfungiblePositionManager
     network: oone-chain
     source:
-      address: '0x57B49a12b20E20658Ee136013dB19fa0e1cb75a6'
+      address: '0x565BFDc8c4E26C5E3df202EBd04fA19252a8C57f'
       abi: NonfungiblePositionManager
-      startBlock: 308980
+      startBlock: 466465
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
